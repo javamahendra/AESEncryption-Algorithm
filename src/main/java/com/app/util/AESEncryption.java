@@ -66,7 +66,7 @@ public class AESEncryption {
 	 * @throws NoSuchAlgorithmException
 	 */
 	public String generateSecureKey(String algorithm) throws NoSuchAlgorithmException {
-		if(algorithm != null) {
+		if(algorithm.trim() == "" || algorithm == null) {
 			algorithm = AES_ALGORITHM;
 		}
 		KeyGenerator keyGenerator = KeyGenerator.getInstance(algorithm);
